@@ -1,0 +1,8 @@
+env/
+__pycache__/
+*.pyc
+.env
+
+sentiment_model/checkpoint-1000/
+sentiment_model/model.safetensors
+multilingual_sentiment_model/model.safetensors

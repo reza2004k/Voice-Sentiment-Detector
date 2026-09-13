@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(80, 80, 120, 0.35),
+            transparent 45%
+        ),
+        #0d0d14;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+
+    zoom: 1.1;
+
+    overflow: hidden;
+
+    transform: translateY(-30px);
+
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 8px;
+
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 15px;
+}
+
+
+.text-box {
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    text-align: left;
+
+    backdrop-filter: blur(10px);
+}
+
+
+#whisper-transcription,
+#gemini-transcription {
+    width: 100%;
+}
+
+
+#whisper-transcription strong,
+#gemini-transcription strong {
+    display: block;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+#whisper-text,
+#gemini-text {
+    min-height: 24px;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    word-wrap: break-word;
+}
+
+
+#whisper-info,
+#gemini-info {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 11px !important;
+
+    line-height: 1.5;
+}
+
+
+.sentiment-box {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+
+.sentiment-box div {
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+
+.inactive {
+    opacity: 0.35;
+}
+
+
+.positive-active {
+    opacity: 1;
+
+    background: rgba(46, 204, 113, 0.2);
+
+    color: #2ecc71;
+
+    border: 1px solid rgba(46, 204, 113, 0.4);
+}
+
+
+.neutral-active {
+    opacity: 1;
+
+    background: rgba(241, 196, 15, 0.2);
+
+    color: #f1c40f;
+
+    border: 1px solid rgba(241, 196, 15, 0.4);
+}
+
+
+.negative-active {
+    opacity: 1;
+
+    background: rgba(231, 76, 60, 0.2);
+
+    color: #e74c3c;
+
+    border: 1px solid rgba(231, 76, 60, 0.4);
+}
+
+
+.confidence {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.language {
+    margin-top: 6px;
+
+    font-size: 12px;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+#micButton {
+    width: 72px;
+    height: 72px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#micButton:hover {
+    transform: scale(1.05);
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+#micButton.recording {
+    background: rgba(231, 76, 60, 0.25);
+
+    border-color: rgba(231, 76, 60, 0.5);
+
+    box-shadow:
+        0 0 25px rgba(231, 76, 60, 0.3);
+}
+
+
+#status {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .text-box {
+        padding: 17px;
+    }
+
+    .sentiment-box {
+        gap: 7px;
+    }
+
+    .sentiment-box div {
+        padding: 8px 12px;
+    }
+
+}

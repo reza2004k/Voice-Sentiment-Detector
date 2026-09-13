@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Voice Detector</title>
+
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}"
+>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <h1>
+        Voice Detector
+    </h1>
+
+    <p class="subtitle">
+        Speak and analyze your voice
+    </p>
+
+
+    <!-- Whisper -->
+
+    <div class="text-box">
+
+        <div id="whisper-transcription">
+
+            <strong>
+                Whisper
+            </strong>
+
+            <div
+                id="whisper-text"
+                style="margin-top: 10px;"
+            >
+                Click the microphone and start speaking.
+            </div>
+
+            <div
+                id="whisper-info"
+                style="
+                    margin-top: 12px;
+                    font-size: 11px;
+                    opacity: 0.65;
+                "
+            >
+                Language: -- |
+                Language confidence: --
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Gemini -->
+
+    <div
+        class="text-box"
+        style="margin-top: 15px;"
+    >
+
+        <div id="gemini-transcription">
+
+            <strong>
+                Gemini
+            </strong>
+
+            <div
+                id="gemini-text"
+                style="margin-top: 10px;"
+            >
+                Waiting for audio...
+            </div>
+
+            <div
+                id="gemini-info"
+                style="
+                    margin-top: 12px;
+                    font-size: 11px;
+                    opacity: 0.65;
+                "
+            >
+                Language: -- |
+                Language confidence: --
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Sentiment -->
+
+    <div class="sentiment-box">
+
+        <div
+            id="positive"
+            class="inactive"
+        >
+            😊 Positive
+        </div>
+
+        <div
+            id="neutral"
+            class="inactive"
+        >
+            😐 Neutral
+        </div>
+
+        <div
+            id="negative"
+            class="inactive"
+        >
+            😞 Negative
+        </div>
+
+    </div>
+
+
+    <!-- Microphone -->
+
+    <button id="micButton">
+        🎤
+    </button>
+
+
+    <div id="status">
+        Click the microphone to start.
+    </div>
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+</body>
+
+</html>
