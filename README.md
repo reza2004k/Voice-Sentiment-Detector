@@ -75,7 +75,7 @@ Because Whisper was trained on speech from many languages, speakers, accents, an
 
 For learning more:
 
-https://arxiv.org/pdf/2212.04356.pdf?utm_source=chatgpt.com
+https://arxiv.org/pdf/2212.04356
 
 # How Does the Multilingual Sentiment Model Understand Your Feeling?
 
@@ -230,5 +230,9 @@ Positive / Neutral / Negative
 The important idea is:
 
 **The model does not understand sentiment by simply searching for positive or negative words. It learns patterns from many training examples and uses Transformer self-attention to understand how words interact with their context.**
+
+For learning more:
+
+https://arxiv.org/pdf/1706.03762
 
 
