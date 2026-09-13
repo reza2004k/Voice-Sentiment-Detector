@@ -73,6 +73,10 @@ Therefore, when a new voice is provided, Whisper does not simply search for an i
 
 Because Whisper was trained on speech from many languages, speakers, accents, and recording conditions, it can recognize and transcribe a wide range of real-world speech.
 
+For learning more:
+
+https://arxiv.org/pdf/2212.04356.pdf?utm_source=chatgpt.com
+
 # How Does the Multilingual Sentiment Model Understand Your Feeling?
 
 This project uses a **multilingual Transformer-based sentiment model** to classify text as **Positive, Neutral, or Negative**.
