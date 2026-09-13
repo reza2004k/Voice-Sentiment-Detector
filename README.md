@@ -1,6 +1,6 @@
 # Voice Sentiment Detector
 
-## Quick Run
+# Quick Run
 ```
 pip install -r requirements.txt
 python app.py
@@ -12,13 +12,19 @@ python -c "import torch; print(torch.__version__); print(torch.version.cuda); pr
 python -c "import torch; print('CUDA:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
 ```
 
-## Summery
-You press the microphone then say something in which language you want to speak.
-Whisper and GoogleGemini to detect your voice and transcribe it.
-Sentiment model work on the transcribe of your voice then check the status of your feeling.
-Is it Positive Neutral or Negative.
-We use Whisper and GoogleGemini for comparing them with each other.
+# Summery
+You press the microphone and say something in the language you want to speak.
+
+Whisper and Google Gemini detect your voice and transcribe it into text.
+
+The sentiment model then analyzes the transcription and determines the sentiment of your speech: **Positive, Neutral, or Negative**.
+
+We use both Whisper and Google Gemini to compare their transcription results using the same audio input.
+
 Gemini and Whisper use different approaches and training pipelines for speech recognition. Gemini can achieve strong transcription accuracy, while Whisper is a widely used open-source multilingual ASR model. This project uses both systems to compare their transcription results under the same audio input.
+
+For Persian (Farsi) voice recordings, Gemini produced more accurate and reliable transcriptions in our experiments, especially when dealing with natural spoken Persian, pronunciation variations, and conversational speech. Therefore, using both systems allows the project to compare their performance and evaluate which transcription is more suitable for the given audio.
+
 
 # Models
 
