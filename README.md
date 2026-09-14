@@ -34,6 +34,16 @@ This model is for Whisper to convert speech to text:
 We use this model for sentiment after whisper transcribe your voice:
 ## multilingual_sentiment_model
 You should download this model from HuggingFace
+Actually, you should just download 
+
+model.safetensors
+
+541 MB
+xet
+Upload fine-tuned model weights
+
+Then add it to the folder of multilingual_sentiment_model
+
 
 https://huggingface.co/tabularisai/multilingual-sentiment-analysis/tree/main
 
