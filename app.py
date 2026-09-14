@@ -385,7 +385,7 @@ def analyze():
 
 
         sentiment, confidence = predict_sentiment(
-            whisper_text
+            gemini_text
         )
 
 
