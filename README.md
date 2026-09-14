@@ -5,12 +5,18 @@
 pip install -r requirements.txt
 python app.py
 ```
-If you want to execute your code by GPU you must install Pytorch CUDA 
+If you want to execute your code by GPU you must install **Pytorch CUDA**
 
 ```
 python -c "import torch; print(torch.__version__); print(torch.version.cuda); print(torch.cuda.is_available())"
 python -c "import torch; print('CUDA:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
 ```
+
+If you want to see the result of Google Gemini you have to add an **API KEY** in the line of 29 in app.py.
+
+You can get your **API KEY** here:
+
+https://aistudio.google.com/api-keys?project=gen-lang-client-0189702316
 
 # Summery
 You press the microphone and say something in the language you want to speak.
@@ -36,7 +42,7 @@ We use this model for sentiment after whisper transcribe your voice:
 You should download this model from HuggingFace
 Actually, you should just download 
 
-model.safetensors
+**model.safetensors**
 
 541 MB
 xet
